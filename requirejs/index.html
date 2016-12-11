@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>require</title>
+</head>
+<body>
+<script>
+    function getServer(){
+        return "/GulpDemo"
+    }
+</script>
+<script src="modules/requirejs/require.js"></script>
+<script>
+    require.config({
+        baseUrl : getServer()+"/",
+        paths:{
+            "PDAppDir":"requirejs/app"
+        }
+    });
+    require(["PDAppDir/main-build-c144065c18"],function () {
+
+    })
+</script>
+</body>
+</html>
